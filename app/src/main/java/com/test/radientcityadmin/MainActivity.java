@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnUserAdd, btnUserSearch, btnServices, announce;
+    Button btnUserAdd, btnUserSearch, btnServices, announce, addBill;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btnUserSearch = findViewById(R.id.users);
         btnServices = findViewById(R.id.services);
         announce = findViewById(R.id.announcements);
+        addBill = findViewById(R.id.bills);
     }
 
     private void activitySwitch() {
@@ -54,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AddAnnouncement.class);
+                startActivity(intent);
+            }
+        });
+        addBill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AddBills.class);
                 startActivity(intent);
             }
         });

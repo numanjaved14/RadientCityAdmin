@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -11,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Announcements"
+        android:layout_margin="@dimen/_20sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,28 +24,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add User"
+        android:layout_margin="@dimen/_20sdp"
         app:layout_constraintBottom_toTopOf="@+id/users"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/announcements" />
 
     <Button
-        android:id="@+id/users"
+        android:id="@+id/complaints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Management"
+        android:text="COMPLAINTS"
+        android:layout_margin="@dimen/_20sdp"
         app:layout_constraintBottom_toTopOf="@+id/services"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/add_user" />
 
     <Button
+        android:id="@+id/bills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD BILLS"
+        android:layout_margin="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/services"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/complaints" />
+
+    <Button
         android:id="@+id/services"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Services"
+        android:layout_margin="@dimen/_20sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/users" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/bills" />
+</androidx.appcompat.widget.LinearLayoutCompat>
