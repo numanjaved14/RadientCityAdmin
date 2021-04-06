@@ -11,6 +11,9 @@
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
         android:hint="Announcement Title"
+        android:textColorHint="#8E8C8C"
+        android:textColor="@color/white"
+        android:singleLine="true"
         android:layout_marginTop="@dimen/_80sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,17 +23,44 @@
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
         android:hint="Announcement Description"
+        android:textColorHint="#8E8C8C"
+        android:textColor="@color/white"
+        android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/announce_title" />
+    <EditText
+        android:id="@+id/announce_status"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:hint="Announcement Status"
+        android:textColorHint="#8E8C8C"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/announce_desc" />
+    <EditText
+        android:id="@+id/announce_date"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:hint="Announcement Date : yy/mm/dd"
+        android:textColorHint="#8E8C8C"
+        android:singleLine="true"
+        android:inputType="date"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/announce_status" />
     <Button
         android:id="@+id/select_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Image"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/announce_desc"/>
+        app:layout_constraintTop_toBottomOf="@+id/announce_date"/>
     <Button
         android:id="@+id/submit_announce"
         android:layout_width="wrap_content"

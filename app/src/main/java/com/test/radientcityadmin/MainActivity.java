@@ -50,5 +50,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        announce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AddAnnouncement.class);
+                startActivity(intent);
+            }
+        });
     }
 }
