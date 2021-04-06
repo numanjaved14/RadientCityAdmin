@@ -13,7 +13,7 @@
         <activity android:name=".AddAnnouncement" />
         <activity android:name=".Announcements" />
         <activity android:name=".ServiceRequests" />
-        <activity android:name=".SearchUser" />
+        <activity android:name=".UserComplaint" />
         <activity android:name=".AddUser" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Login">

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initialize() {
         btnUserAdd = findViewById(R.id.add_user);
-        btnUserSearch = findViewById(R.id.users);
+        btnUserSearch = findViewById(R.id.complaints);
         btnServices = findViewById(R.id.services);
         announce = findViewById(R.id.announcements);
         addBill = findViewById(R.id.bills);
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         btnUserSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SearchUser.class);
+                Intent intent = new Intent(MainActivity.this, UserComplaint.class);
                 startActivity(intent);
             }
         });

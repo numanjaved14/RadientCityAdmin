@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class SearchUser extends AppCompatActivity {
+public class UserComplaint extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

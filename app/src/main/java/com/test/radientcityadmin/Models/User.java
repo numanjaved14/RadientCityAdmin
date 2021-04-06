@@ -2,20 +2,37 @@ package com.test.radientcityadmin.Models;
 
 public class User {
 
+    String firebaseId;
     String userName;
-    String userEmail;
-    String userPassword;
-    String userAddress;
+    String userMail;
+    String address;
+    String password;
+    String type;
 
-    public User(){}
-
-    public User(String userName, String userEmail, String userPassword, String userAddress) {
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-        this.userAddress = userAddress;
+    public User() {
     }
 
+    public User(String firebaseId, String userName, String userMail, String address, String password, String type) {
+        this.firebaseId = firebaseId;
+        this.userName = userName;
+        this.userMail = userMail;
+        this.address = address;
+        this.password = password;
+        this.type = type;
+    }
+
+    public User(String firebaseId, String userName) {
+        this.firebaseId = firebaseId;
+        this.userName = userName;
+    }
+
+    public String getFirebaseId() {
+        return firebaseId;
+    }
+
+    public void setFirebaseId(String firebaseId) {
+        this.firebaseId = firebaseId;
+    }
 
     public String getUserName() {
         return userName;
@@ -25,27 +42,35 @@ public class User {
         this.userName = userName;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public String getUserMail() {
+        return userMail;
     }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
+    public void setUserMail(String userMail) {
+        this.userMail = userMail;
     }
 
-    public String getUserPassword() {
-        return userPassword;
+    public String getAddress() {
+        return address;
     }
 
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getUserAddress() {
-        return userAddress;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserAddress(String userAddress) {
-        this.userAddress = userAddress;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
