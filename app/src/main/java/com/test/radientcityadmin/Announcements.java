@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.test.radientcityadmin.Adapters.RecyclerViewAdapter;
 import com.test.radientcityadmin.Models.Datamodel_announce;
 
@@ -16,6 +19,7 @@ public class Announcements extends AppCompatActivity {
 
     RecyclerView recyclerView;
     RecyclerViewAdapter recyclerViewAdapter;
+    FloatingActionButton btnAddAnnounce;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +28,19 @@ public class Announcements extends AppCompatActivity {
 
         initialize();
         getData();
+
+        btnAddAnnounce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Announcements.this, AddAnnouncement.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initialize() {
         recyclerView = findViewById(R.id.recyclerview_home);
+        btnAddAnnounce = findViewById(R.id.add_announce_btn);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewAdapter = new RecyclerViewAdapter(this);
         recyclerView.setAdapter(recyclerViewAdapter);
