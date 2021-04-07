@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserComplaint extends AppCompatActivity {
-    private RecyclerView recycler_service;
+    private RecyclerView recycler_complaint;
     private ComplaintAdapter recyclerViewAdapter;
     private List<ComplaintDataModel> list = new ArrayList<ComplaintDataModel>();
 
@@ -33,10 +33,10 @@ public class UserComplaint extends AppCompatActivity {
     }
 
     private void setRecycler() {
-        recycler_service = findViewById(R.id.recycler_service);
-        recycler_service.setLayoutManager(new LinearLayoutManager(this));
+        recycler_complaint = findViewById(R.id.recycler_complaint);
+        recycler_complaint.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewAdapter = new ComplaintAdapter(this);
-        recycler_service.setAdapter(recyclerViewAdapter);
+        recycler_complaint.setAdapter(recyclerViewAdapter);
     }
 
     private void fetchAllComplaint() {
