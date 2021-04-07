@@ -156,7 +156,7 @@ public class AddBills extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 progressDialog.dismiss();
                 if (task.isSuccessful()) {
-                    Toast.makeText(AddBills.this, "Announcement Added Successfully",
+                    Toast.makeText(AddBills.this, "Bill Added Successfully",
                             Toast.LENGTH_SHORT).show();
                     finish();
                 } else {

@@ -6,10 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnUserAdd, btnUserSearch, btnServices, announce, addBill;
+    ImageButton ib_logOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
         initialize();
         activitySwitch();
 
+        ib_logOut.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initialize() {
@@ -27,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         btnServices = findViewById(R.id.services);
         announce = findViewById(R.id.announcements);
         addBill = findViewById(R.id.bills);
+        ib_logOut = findViewById(R.id.logout);
     }
 
     private void activitySwitch() {
